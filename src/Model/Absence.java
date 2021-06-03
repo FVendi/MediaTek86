@@ -3,16 +3,48 @@ import java.sql.Date;
 
 
 public class Absence {
-private int idpersonnel;
-private Date datedebut;
-private int idmotif;
-private Date datefin;
+	private int idPersonnel;
+	private Date dateDebut;
+	private int idMotif;
+	private Date dateFin;
+	
+	public Absence(int idPersonnel, Date dateDebut, int idMotif, Date dateFin) {
+		super();
+		this.idPersonnel = idPersonnel;
+		this.dateDebut = dateDebut;
+		this.idMotif = idMotif;
+		this.dateFin = dateFin;
+	}
 
+	public int getIdpersonnel() {
+		return idPersonnel;
+	}
 
-public Absence(int _idpersonnel, Date _datedebut, int _idmotif, Date _datefin) {
-	this.idpersonnel=_idpersonnel;
-	this.datedebut=_datedebut;
-	this.idmotif=_idmotif;
-	this.datefin=_datefin;
-}
+	public void setIdpersonnel(int idpersonnel) {
+		this.idPersonnel = idpersonnel;
+	}
+
+	public Date getdateDebut() {
+		return dateDebut;
+	}
+
+	public void setdateDebut(Date dateDebut) {
+		this.dateDebut = dateDebut;
+	}
+
+	public int getidMotif() {
+		return idMotif;
+	}
+
+	public void setidMotif(int idMotif) {
+		this.idMotif = idMotif;
+	}
+
+	public Date getdateFin() {
+		return dateFin;
+	}
+
+	public void setdateFin(Date dateFin) {
+		this.dateFin = dateFin;
+	}	
 }

@@ -21,6 +21,7 @@ public class DatabaseConnection {
             System.out.println("Database Connection Creation Failed : " + ex.getMessage());
         }
     }
+    
     public Connection getConnection() {
         return this.connection;
     }
@@ -33,28 +34,28 @@ public class DatabaseConnection {
         }
         return instance;
     }
-    
+
     public ResultSet query(String query) throws SQLException{
     	Statement statement = this.connection.createStatement();
         ResultSet res = statement.executeQuery(query);
         return res;
     }
-    
+
     public int insert(String insertQuery) throws SQLException {
     	Statement statement = this.connection.createStatement();
         int result = statement.executeUpdate(insertQuery);
-        return result; 
+        return result;
     }
-    
+
     public int update(String updatetQuery) throws SQLException {
     	Statement statement = this.connection.createStatement();
         int result = statement.executeUpdate(updatetQuery);
-        return result; 
+        return result;
     }
-    
+
     public int delete(String deleteQuery) throws SQLException {
     	Statement statement = this.connection.createStatement();
         int result = statement.executeUpdate(deleteQuery);
-        return result; 
+        return result;
     }
 }
